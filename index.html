@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="cscss.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="registeration">
+    <header>
+      <h1><b>Academic Registeration Portal</b></h1>
+    </header>
+    <div class="fill">
+      <form
+        action="success.html"
+        onsubmit="return validateForm()"
+        method="post"
+        name="myForm"
+      >
+        <div class="fh"><b>Registeration Form</b></div>
+        <div class="formelement">
+          <div class="fname">
+            <label for="name"><b>Name:</b><br /></label>
+            <input
+              class="name"
+              type="text"
+              placeholder="enter your full name"
+              autocomplete="off"
+              name="d"
+              required
+            />
+            <b><p class="formerror" id="fname"></p></b>
+          </div>
+          <div class="contain">
+            <div class="gender">
+              <label for="gender"><b>Gender:</b></label>
+            </div>
+            <div class="option">
+              <div class="lad">
+                <input class="male" type="radio" name="gender" />
+                <label for="male">Male</label>
+              </div>
+              <div class="mad">
+                <input class="female" type="radio" name="gender" />
+                <label for="female">Female</label>
+              </div>
+              <div class="cad">
+                <input class="others" type="radio" name="gender" />
+                <label for="others">Others</label>
+              </div>
+            </div>
+          </div>
+          <div class="phnumber">
+            <label for="number"><b>Phone Number</b><br /></label>
+            <input
+              class="number"
+              type="number"
+              placeholder="enter the mobile number"
+              autocomplete="off"
+              name="e"
+              required
+            />
+            <b><p class="formerror" id="fnumber"></p></b>
+          </div>
+          <div class="emailID">
+            <label for="emailID"><b>Email ID</b><br /></label>
+            <input
+              class="email"
+              type="email"
+              pattern="f[0-9]{8}@pilani.bits-pilani.ac.in"
+              title="please enter only bits(pilani campus)-emailID"
+              placeholder="enter your BITS email ID"
+              autocomplete="off"
+              name="p"
+              required
+            />
+            <p class="formerror" id="femail"></p>
+          </div>
+          <div class="sID">
+            <label for="studentID"><b>Student ID</b><br /></label>
+            <input
+              class="studentID"
+              type="text"
+              placeholder="2021YYPSXXXXP"
+              autocomplete="off"
+              pattern="[0-9]{4}[A-Za-z][0-9][A-Za-z]{2}[0-9]{4}[a-zA-Z]"
+              title="Please enter in the pattern as provided in placeholder"
+              name="a"
+              required
+            />
+            <p class="formerror" id="studID"></p>
+          </div>
+          <div class="pwd">
+            <label for="pass"><b>Password:</b><br /></label>
+            <input
+              type="password"
+              placeholder="enter the password"
+              autocomplete="off"
+              class="pass"
+              name="k"
+              required
+            />
+            <b><p class="formerror" id="passw"></p></b>
+          </div>
+          <div class="sub">
+            <input type="submit" />
+            <input type="reset" onclick="clearErrors" />
+          </div>
+        </div>
+      </form>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
